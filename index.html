@@ -1,0 +1,94 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (existing head content) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Study Room <i class="fas fa-graduation-cap"></i></h1>
+        <div class="theme-control">
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+            <span id="themeStatus">Dark Mode</span>
+        </div>
+    </header>
+    
+    <!-- Timer Section Enhanced -->
+    <section id="timer">
+        <div class="progress-circle">
+            <svg>
+                <circle class="progress" cx="75" cy="75" r="65"></circle>
+            </svg>
+            <div id="time">25:00</div>
+        </div>
+        <div class="timer-controls">
+            <button class="interval-btn" data-time="1500">Work 25</button>
+            <button class="interval-btn" data-time="300">Break 5</button>
+            <button class="interval-btn" data-time="900">Long Break 15</button>
+            <button id="start"><i class="fas fa-play"></i></button>
+            <button id="reset"><i class="fas fa-redo"></i></button>
+        </div>
+    </section>
+
+    <!-- Enhanced Task Manager -->
+    <section id="tasks">
+        <h2><i class="fas fa-tasks"></i> Task Manager</h2>
+        <div class="task-input-group">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <select id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="addTask"><i class="fas fa-plus"></i></button>
+        </div>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Enhanced Notes Section -->
+    <section id="notes">
+        <h2><i class="fas fa-sticky-note"></i> Study Notes</h2>
+        <div class="notes-container">
+            <div class="note-card new-note">
+                <input type="text" class="note-title" placeholder="Title">
+                <textarea class="note-content" placeholder="Content..."></textarea>
+                <button class="save-note"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Music Player -->
+    <section id="music">
+        <h2><i class="fas fa-music"></i> Study Music</h2>
+        <div class="playlist">
+            <div class="track active" data-src="study-music-1.mp3">
+                <span>Lofi Study Mix 1</span>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="track" data-src="study-music-2.mp3">
+                <span>Classical Piano</span>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+        </div>
+        <audio id="audioPlayer" controls>
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Statistics Section Added -->
+    <section id="stats">
+        <h2><i class="fas fa-chart-line"></i> Statistics</h2>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>Completed Pomodoros</h3>
+                <span id="pomodoros">0</span>
+            </div>
+            <div class="stat-box">
+                <h3>Tasks Completed</h3>
+                <span id="completedTasks">0</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
